@@ -1,0 +1,40 @@
+.header {
+  width: 100%;
+  height: 60px;
+  background-color: var(--pmbet-blue);
+}
+
+.promotions {
+  margin-top: 0.5rem;
+  width: 100%;
+
+  .container {
+    margin: 0 auto;
+    max-width: 1290px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.promotions__banner {
+  width: 63.88%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rebeccapurple;
+
+  &::after {
+    content: '';
+    display: block;
+    padding-top: 15.41%;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-position: center;
+    object-fit: cover;
+  }
+}
