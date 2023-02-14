@@ -27,3 +27,20 @@ body {
   margin: 0;
   padding: 0;
 }
+
+.pagination {
+  margin-top: 3px;
+  margin-right: auto;
+
+
+  //delete
+  font-size: 12px;
+  font-weight: 700;
+  color: black;
+  letter-spacing: 8px;
+  cursor: pointer;
+  text-transform: uppercase;
+  background-color: white;
+  padding: 4px;
+  border-radius: 3px;
+}
