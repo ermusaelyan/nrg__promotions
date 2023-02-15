@@ -6,13 +6,19 @@
   width: 100%;
   height: 60px;
   background-color: var(--pmbet-blue);
+  z-index: 3;
 }
 
 .promotions {
+  font-family: 'Poppins', 'Roboto Condensed', sans-serif;
   padding-top: rem(68px);
   width: 100%;
   min-height: 100vh;
   background-color: var(--pmbet-cream);
+
+  @include mobile {
+    padding-top: rem(60px);
+  }
 
   .container {
     margin: 0 auto;
@@ -53,9 +59,41 @@
   }
 
   @include mobile {
+    padding-top: rem(12px);
     width: 100%;
+    align-items: flex-start;
   }
 
+}
+
+.promotions__backToMenu {
+  position: absolute;
+  top: rem(12px);
+  left: rem(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+.promotions__backToMenuButton {
+  padding: rem(4px);
+  width: rem(30px);
+  height: rem(30px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  outline: none;
+  background-color: transparent;
+
+  svg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    fill: var(--pmbet-white);
+  }
 }
 
 .promotions__icon, .promotions__title {
@@ -78,6 +116,10 @@
     object-position: center;
     fill: var(--pmbet-white);
   }
+
+  @include mobile {
+    margin-right: rem(10px);
+  }
 }
 
 .promotions__title {
@@ -85,6 +127,11 @@
   font-weight: 600;
   color: var(--pmbet-white);
   text-transform: uppercase;
+
+  @include mobile {
+    margin-top: 3px;
+    font-size: rem(18px);
+  }
 }
 
 .promotions__list {
@@ -96,6 +143,11 @@
   align-items: center;
   justify-content: flex-start;
   flex-wrap: wrap;
+
+  @include mobile {
+    margin: 0;
+    padding: rem(10px) rem(10px) 0;
+  }
 }
 
 .promotions__item {
@@ -108,11 +160,22 @@
   &:nth-child(3n + 3) {
     margin-right: 0;
   }
+
+  @include mobile {
+    margin: 0 0 rem(15px);
+    width: 100%;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
 }
 
 .promotions__link {
   padding: rem(10px) rem(10px) rem(6px);
-  display: inline-block;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
   width: 100%;
   background-color: var(--pmbet-white);
   overflow: hidden;
@@ -120,6 +183,10 @@
   border-radius: 2px;
   border: 1px solid var(--pmbet-cream3);
   cursor: pointer;
+
+  @include mobile {
+    padding: rem(9px) rem(9px) rem(5px);
+  }
 }
 
 .promotions__image {
@@ -163,6 +230,10 @@
   overflow: hidden;
   flex-grow: 1;
   text-overflow: ellipsis;
+
+  @include mobile {
+    font-size: rem(14px);
+  }
 }
 
 .promotions__subtitle {
@@ -176,4 +247,230 @@
   overflow: hidden;
   flex-grow: 1;
   text-overflow: ellipsis;
+
+  @include mobile {
+    font-size: rem(10px);
+  }
+}
+
+.promotions__loadMore {
+  width: 37.68%;
+  margin: rem(25px) 0 rem(39px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.promotionsLoadMoreButton {
+  width: 100%;
+  height: rem(50px);
+  font-size: rem(18px);
+  font-weight: 700;
+  color: var(--pmbet-white);
+  text-transform: uppercase;
+  background-color: var(--pmbet-green);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  outline: none;
+  border-radius: rem(8px);
+}
+
+.scrollTop {
+  position: fixed;
+  right: rem(5px);
+  bottom: rem(50px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+}
+
+.scrollTopButton {
+  padding: rem(12px);
+  width: rem(40px);
+  height: rem(40px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  outline: none;
+  background-color: var(--pmbet-green);
+  border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.15) 2px 2px 3px;
+
+  svg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    fill: var(--pmbet-white-lightest--3);
+    transform: rotate(90deg);
+  }
+}
+
+//================= Promotion =================
+
+.promotion {
+  font-family: 'Roboto Condensed', 'Poppins', sans-serif;
+  padding-top: rem(85px);
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--pmbet-cream);
+
+  .container {
+    margin: 0 auto;
+    max-width: 736px;
+
+    @include mobile {
+      padding: 0 rem(10px);
+    }
+  }
+}
+
+.promotion__head {
+  margin-bottom: rem(5px);
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.promotion__prevPage {
+  margin-right: rem(10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.promotion__prevButton {
+  padding: rem(4px);
+  width: rem(30px);
+  height: rem(30px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  outline: none;
+  background-color: transparent;
+
+  svg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    fill: var(--pmbet-green);
+  }
+}
+
+.promotion__title {
+  font-size: rem(20px);
+  font-weight: 700;
+  color: var(--pmbet-green);
+  text-transform: uppercase;
+
+  @include mobile {
+    font-size: rem(14px);
+  }
+}
+
+.promotion__body {
+  width: 100%;
+
+  @include mobile {
+    padding: rem(9px);
+    background-color: var(--pmbet-white);
+    border: 1px solid var(--pmbet-cream3);
+  }
+}
+
+.promotion__banner {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  &::after {
+    content: '';
+    display: block;
+    padding-top: 40.22%;
+  }
+
+  .image-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+.promotion__conditions {
+  margin: rem(10px) 0;
+  font-size: rem(18px);
+  font-weight: 700;
+  color: var(--pmbet-blue);
+
+  span {
+    margin: 0 rem(6px);
+    display: inline-block;
+    font-size: rem(15px);
+  }
+
+  @include mobile {
+    margin: rem(12px) 0 rem(8px);
+    font-size: rem(12px);
+    color: var(--pmbet-gray);
+
+    span {
+      margin: 0 rem(2px);
+      display: inline-block;
+      font-size: rem(10px);
+    }
+  }
+}
+
+.promotion__info {
+  max-width: 100%;
+}
+
+.promotion__text {
+  font-size: rem(14px);
+  font-weight: normal;
+  line-height: rem(20px);
+  color: var(--pmbet-blue);
+}
+
+.promotion__start {
+  width: max-content;
+  margin-top: rem(30px);
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @include mobile {
+    margin: rem(10px) auto 0 0;
+  }
+}
+
+.promotion__startButton {
+  padding: 9px 48px;
+  font-size: 15px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--pmbet-white);
+  border: none;
+  outline: none;
+  background-color: var(--pmbet-green);
+  border-radius: 3px;
+  cursor: pointer;
 }

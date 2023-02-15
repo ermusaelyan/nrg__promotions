@@ -7,7 +7,7 @@ const PromotionsItem = () => {
         <span className="promotions__image">
           <span className="image-container">
             <img
-              src="https://upload.wikimedia.org/wikipedia/commons/7/71/Black.png"
+              src="https://fs.betunit.com/1659958389100756x312_EN_promo.jpg"
               alt="SMART WINNING TOURNAMENT"
             />
           </span>

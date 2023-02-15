@@ -4,7 +4,7 @@ import { useMediaQuery } from 'react-responsive';
 
 const Promotions = () => {
   const isMobile = useMediaQuery({
-    query: '(max-width: 1020px)',
+    query: '(max-width: 1024px)',
   });
 
   return (
@@ -13,7 +13,7 @@ const Promotions = () => {
         <div className="promotions__banner">
           {isMobile && (
             <div className="promotions__backToMenu">
-              <button className="promotions__backToMenuButton">
+              <button type={'button'} className="promotions__backToMenuButton">
                 <svg>
                   <use xlinkHref={'#back'} />
                 </svg>
@@ -32,7 +32,23 @@ const Promotions = () => {
             <PromotionsItem key={i} />
           ))}
         </ul>
-        <div className="pagination">pagination</div>
+        {!isMobile && <div className="pagination">pagination</div>}
+        {isMobile && (
+          <>
+            <div className="promotions__loadMore">
+              <button type={'button'} className="promotionsLoadMoreButton">
+                Load More
+              </button>
+            </div>
+            <div className="scrollTop">
+              <button className="scrollTopButton">
+                <svg>
+                  <use xlinkHref={'#back'} />
+                </svg>
+              </button>
+            </div>
+          </>
+        )}
       </div>
     </div>
   );
