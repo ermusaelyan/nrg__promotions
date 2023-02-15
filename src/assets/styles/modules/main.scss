@@ -51,6 +51,11 @@
     background-color: var(--pmbet-black-5);
     z-index: 1;
   }
+
+  @include mobile {
+    width: 100%;
+  }
+
 }
 
 .promotions__icon, .promotions__title {
